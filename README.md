@@ -1,57 +1,117 @@
-# Instagram Crew
+# 📱 Instagram Content Strategy CrewAI Project
 
-Welcome to the Instagram Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+An intelligent automation system built with **CrewAI** to streamline your **Instagram content strategy** — from market research and planning to visual concept creation and copywriting.
 
-## Installation
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 🧠 Overview
 
-First, if you haven't already, install Poetry:
+This project automates the creation of a powerful content strategy tailored to your Instagram niche and weekly focus areas. Using CrewAI, it brings together multiple specialized agents to:
+- Research trends
+- Build content calendars
+- Design visual concepts
+- Write compelling captions
 
+
+## 🚀 Key Features
+
+- **🔍 Automated Market Research**  
+  Scrapes Instagram and web data to identify:
+  - Trending topics
+  - Relevant hashtags
+  - Competitor strategies
+
+- **📅 Weekly Content Calendar**  
+  Develops a strategic plan with daily post ideas and themes.
+
+- **🎨 Visual Concept Creation**  
+  Produces image descriptions to guide AI image generation tools.
+
+- **✍️ SEO-Optimized Copywriting**  
+  Writes attention-grabbing captions with relevant hashtags and CTAs.
+
+- **📄 End-to-End Strategy Report**  
+  Generates a comprehensive `report.md` with all content assets for the week.
+
+---
+
+## ⚙️ How It Works
+
+Each AI agent in the Crew has a dedicated role:
+
+| Agent | Role |
+|-------|------|
+| **Market Research Agent** | Analyzes trends and competitors using search tools |
+| **Content Strategist Agent** | Builds a content calendar using research insights |
+| **Visual Creator Agent** | Describes visual content for each post |
+| **Copywriter Agent** | Writes engaging and optimized captions |
+| **Report Generator** | Compiles a full content strategy report |
+
+---
+
+## 📦 Installation
+
+> **Python version required:** `>=3.10 <=3.13`  
+> **Dependency manager:** [Poetry](https://python-poetry.org/)
+
+### Step 1: Install Poetry (if not installed)
 ```bash
 pip install poetry
 ```
-
-Next, navigate to your project directory and install the dependencies:
-
-1. First lock the dependencies and then install them:
+### Step 2: Clone this repository and navigate into it
+```bash
+cd instagram-crewai-strategy
+```
+### Step 3: Install dependencies
 ```bash
 poetry lock
-```
-```bash
 poetry install
 ```
-### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+### 🔧 Customization
+1. Add Your API Key
+Create a .env file in the root directory:
 
-- Modify `src/instagram/config/agents.yaml` to define your agents
-- Modify `src/instagram/config/tasks.yaml` to define your tasks
-- Modify `src/instagram/crew.py` to add your own logic, tools and specific args
-- Modify `src/instagram/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-poetry run instagram
+```env
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-This command initializes the instagram Crew, assembling the agents and assigning them tasks as defined in your configuration.
+2. Configure Your Agents
+Edit src/instagram/config/agents.yaml to define agent roles, tools, and personalities.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folser
+3. Define Tasks
+Edit src/instagram/config/tasks.yaml to assign objectives to each agent.
 
-## Understanding Your Crew
+4. Customize Core Logic
+Modify these files for more advanced configurations:
 
-The instagram Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+src/instagram/crew.py: Logic, tools, and argument setup
 
-## Support
+src/instagram/main.py: Customize user inputs and execution
 
-For support, questions, or feedback regarding the Instagram Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Joing our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat wtih our docs](https://chatg.pt/DWjSBZn)
+### ▶️ Running the Project
+From the root folder, start the crew and generate your content strategy:
 
-Let's create wonders together with the power and simplicity of crewAI.
+```bash
+
+poetry run instagram
+```
+This command will trigger all agents to:
+
+Perform research
+
+Develop content
+
+Generate a complete report.md file in the root directory
+
+### 🧬 Understanding the Crew Structure
+Agents → Defined in config/agents.yaml
+
+Tasks → Defined in config/tasks.yaml
+
+Execution Logic → Controlled in crew.py and main.py
+
+All agents collaborate to deliver a seamless content strategy pipeline.
+
+### 📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for full details.
