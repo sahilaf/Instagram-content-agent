@@ -36,6 +36,8 @@ This project automates the creation of a powerful content strategy tailored to y
 
 ## ⚙️ How It Works
 
+![Agent Diagram](./docs/Content_agent_flow.png)
+
 Each AI agent in the Crew has a dedicated role:
 
 | Agent | Role |
