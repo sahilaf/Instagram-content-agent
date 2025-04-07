@@ -61,7 +61,7 @@ pip install poetry
 ```
 ### Step 2: Clone this repository and navigate into it
 ```bash
-cd instagram-crewai-strategy
+cd instagram-content-agent
 ```
 ### Step 3: Install dependencies
 ```bash
